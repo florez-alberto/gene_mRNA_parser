@@ -12,17 +12,18 @@ while x!='':
                 gene=x.strip().split('/gene=')[1].strip('"')
                 rawdata.append([gene,positions])
                 x=f.readline()
-    if x=='ORIGIN      \n':
+    if 'ORIGIN' in x:
         sequence=''
         x=f.readline()
-        while x!="//\n":
-            for i in x.strip().split()[1:]:
-                sequence+=i
-                x=f.readline()
+        save = open(r'C:\Users\Alberto\Downloads\seq1.txt', 'a')
+        while "//" not in x:
+            new = x.strip().split()[1:]
+            for i in new:
+                save.write(i)
+        save.close()
         rawdata.append([sequence])
         x=f.readline()
     x=f.readline()
-        
-                    
+               
         
 
