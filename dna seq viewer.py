@@ -34,7 +34,7 @@ while x!='':
 #store the rawdata list also
 save1= open(r'C:\Users\Alberto\Downloads\rawdata.txt', 'w')
 for s in rawdata:
-    save1.write(str(s))
+    save1.write(str(s)+"\n")
 save1.close()
 
 
