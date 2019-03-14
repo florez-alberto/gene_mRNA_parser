@@ -1,5 +1,5 @@
 import re
-f=open(r'C:\Users\Alberto\Downloads\sequence.gb')
+f=open(r'C:\Users\Alberto\Downloads\sequence1.gb')
 rawdata=[]
 total=[]
 x=f.readline()
